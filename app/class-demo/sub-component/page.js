@@ -1,4 +1,4 @@
-import PageHeader from "../components/PageHeader";
+import PageHeader from "@app/components/PageHeader";
 import StudentInfoSection from "./StudentInfoCard";
 
 const studentInfo = {
