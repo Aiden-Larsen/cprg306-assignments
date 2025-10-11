@@ -12,6 +12,7 @@ export default function Page() {
                     <ol>
                         <li>Link to: <Link href="./test/array-test">Array Test</Link></li>
                         <li>Link to: <Link href="./test/button-test">Button Test</Link></li>
+                        <li>Link to: <Link href="./test/arrow-function">Arrow Function Test</Link></li>
                     </ol>
                 </div>
             </div>

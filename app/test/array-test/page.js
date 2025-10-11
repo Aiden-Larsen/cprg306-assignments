@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import CreateList from "./create-list";
-import PageFooter from "/app/components/PageFooter";
 
 const pageFooter = {
     author: "Crnbry",
@@ -20,20 +19,19 @@ export default function Page() {
             </header>
             <div className="flex-col mx-5 my-6 px-4 py-2 bg-blue-500">
                 <p className="my-1 ">Click button to print out myArray!!</p>
-                {/* <button 
+                <button 
                 onClick={createElement(myVar)} 
                 className="rounded px-2.5 py-1 bg-blue-700  dark:bg-blue-500 hover:bg-blue-400"
                 >Click Me!! - variable</button>
                 <button
                 onClick={createArrayElement(myArray)}
                 className="rounded px-2.5 py-1 bg-blue-700 dark:bg-blue-500 hover:bg-blue-400"
-                >Click Me!! - array</button> */}
+                >Click Me!! - array</button>
                 <ul>
                     <p>Items from myArray will show up here: </p>
                     <CreateList/>
                 </ul>
             </div>
-            <PageFooter {...pageFooter}/>
         </main>
     )
     
