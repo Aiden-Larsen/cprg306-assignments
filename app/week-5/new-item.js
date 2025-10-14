@@ -76,8 +76,9 @@ Category: ${item.category}`
             <section>
                 <section className="rounded bg-blue-300 p-2 mb-4">
                     <div>
-                        <label className="block font-bold text-gray-600 p-1">Item Name</label>
+                        <label htmlFor="name" className="block font-bold text-gray-600 p-1">Item Name</label>
                         <input 
+                        id="name"
                         type="text" 
                         placeholder="e.g. bread: 1, Bakery" 
                         required 
@@ -116,26 +117,26 @@ Category: ${item.category}`
                     </section>
                 </section>
                 <section className="rounded bg-blue-300 p-2 mb-4">
-                        <div>
-                            <label htmlFor="category" className="block text-gray-600 font-bold p-1">Category</label>
-                            <select 
-                            id="category"
-                            value={category}
-                            onChange={handleCategory} 
-                            className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2 mx-2 my-1">
-                                <option value="Produce" >Produce</option>
-                                <option value="Dairy">Dairy</option>
-                                <option value="Bakery">Bakery</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Frozen Foods">Frozen Foods</option>
-                                <option value="Canned Goods">Canned Goods</option>
-                                <option value="Dry Goods">Dry Goods</option>
-                                <option value="Beverages">Beverages</option>
-                                <option value="Snacks">Snacks</option>
-                                <option value="Household">Household</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
+                    <div>
+                        <label htmlFor="category" className="block text-gray-600 font-bold p-1">Category</label>
+                        <select 
+                        id="category"
+                        value={category}
+                        onChange={handleCategory} 
+                        className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2 mx-2 my-1">
+                            <option value="Produce" >Produce</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Frozen Foods">Frozen Foods</option>
+                            <option value="Canned Goods">Canned Goods</option>
+                            <option value="Dry Goods">Dry Goods</option>
+                            <option value="Beverages">Beverages</option>
+                            <option value="Snacks">Snacks</option>
+                            <option value="Household">Household</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
                 </section>
                 <section className="rounded bg-blue-300 p-2">
                     <button 
