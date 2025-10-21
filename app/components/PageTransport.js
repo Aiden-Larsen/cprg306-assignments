@@ -6,34 +6,36 @@ export default function PageTransporter() {
 
     function changePage(event) {
         const newPage = (event.target.value);
-        // console.log(newPage);
+        console.log(newPage);
+
         
-        if(newPage === "alert-msg") {
-            alert("will be finisheed soon");
-        } else {
-            console.log("this select field will allow you to travel to different project folders when an option is selected. It is currently being tested and does not work properly");
+        // if(newPage === "alert-msg") {
+        //     alert("will be finisheed soon");
+        // } else {
+        //     console.log("this select field will allow you to travel to different project folders when an option is selected. It is currently being tested and does not work properly");
+        // }
+
+        if(newPage !== "select-page") {
+            setCurrPage(newPage);
+
+            window.location.replace(newPage);
         }
-
-        // setCurrPage(newPage);
-        // console.log(newPage);
-
-        // window.location.replace(newPage);
     }
 
     return (
         <div>
             <form className="rounded bg-blue-400 p-2">
                 <label className="text-xl font-bold">Page Select: </label>
-                <select value={currPage} className="text-l">
-                    <option value="alert-msg" onClick={changePage}>under-construction</option>
-                    <option value="info-msg" onClick={changePage}>more-info</option>
-                    {/* <option value="">HOME</option>
+                <select value={currPage} className="text-l" onChange={changePage}>
+                    {/* <option value="alert-msg" onClick={changePage}>under-construction</option>
+                    <option value="info-msg" onClick={changePage}>more-info</option> */}
+                    <option value="select-page">select-page</option>
                     <option value="week-2">WEEK-2</option>
                     <option value="week-3">WEEK-3</option>
                     <option value="week-4">WEEK-4</option>
                     <option value="week-5">WEEK-5</option>
                     <option value="week-6">WEEK-6</option>
-                    <option value="week-7">WEEK-7</option> */}
+                    <option value="week-7">WEEK-7</option>
                 </select>
             </form>
         </div>

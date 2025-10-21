@@ -23,7 +23,7 @@ export default function ItemList() {
         <div className="rounded bg-blue-400 mx-4 pb-3">
             <div className="pt-2">
             <label className="rounded text-xl font-bold text-gray-800 mx-2">Sort By:</label>
-                <section className="flex flex-row gap-4 mx-4">
+                <section className="flex flex-row text-gray-800 gap-4 mx-4">
 
                     <button 
                     name="button"

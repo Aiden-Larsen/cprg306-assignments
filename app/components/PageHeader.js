@@ -15,7 +15,7 @@ export default function SectionHeader({
         <h1 className="text-3xl font-bold text-gray-900 pl-2">{title}</h1>
         <p className="text-gray-900 font-bold pl-2">{description}</p>
       </div>
-      <div className="self-center max-w-full ml-auto mr-4 text-black">
+      <div className="self-end max-w-full text-black ml-auto mr-4">
         <PageSelect/>
       </div>
     </header>
