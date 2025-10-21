@@ -69,6 +69,8 @@ Category: ${item.category}`
         );
         // resets values to initial
         setName(""), setQuantity(1), setCategory("produce");
+        // sets buttons to default
+        setDeDisabled(true), setInDisabled(false);
     }
 
     return (
@@ -124,7 +126,7 @@ Category: ${item.category}`
                         value={category}
                         onChange={handleCategory} 
                         className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2 mx-2 my-1">
-                            <option value="Produce" >Produce</option>
+                            <option value="Produce">Produce</option>
                             <option value="Dairy">Dairy</option>
                             <option value="Bakery">Bakery</option>
                             <option value="Meat">Meat</option>

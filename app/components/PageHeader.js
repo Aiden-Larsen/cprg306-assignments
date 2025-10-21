@@ -1,3 +1,5 @@
+import PageSelect from "./PageTransport";
+
 export default function SectionHeader({
   title,
   description,
@@ -8,9 +10,14 @@ export default function SectionHeader({
     //   <h2 className="text-2xl lg:text-4xl font-semibold">{title}</h2>
     //   <p className="text-lg">{description}</p>
     // </header>
-    <header className={`rounded mb-3 pb-3 ${bgColor}`}>
-      <h1 className="text-3xl font-bold text-gray-900 pl-2">{title}</h1>
-      <p className="text-gray-900 font-bold pl-2">{description}</p>
+    <header className={`flex flex-row rounded max-w-full pb-4 ${bgColor}`}>
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900 pl-2">{title}</h1>
+        <p className="text-gray-900 font-bold pl-2">{description}</p>
+      </div>
+      <div className="self-center max-w-full ml-auto mr-4 text-black">
+        <PageSelect/>
+      </div>
     </header>
   );
 }
