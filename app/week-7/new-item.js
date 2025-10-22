@@ -45,7 +45,6 @@ export default function NewItem({ onAddItem }) {
 
     const handleCategory = (event) => {
         setCategory(event.target.value);
-        console.log();
     }
 
     const handleSubmit = (event) => {
@@ -54,7 +53,7 @@ export default function NewItem({ onAddItem }) {
         * creates object of the item's values *
         */
         let item = {
-            id: randId(1,99),
+            id: randID(16),
             name: name,
             quantity: quantity,
             category: category,
@@ -67,8 +66,13 @@ export default function NewItem({ onAddItem }) {
         setName(""), setQuantity(1), setCategory("produce"), setDecDisabled(true), setIncDisabled(false);
     }
 
-    const randId = (min, max) => {
-        return Math.random() * (max-min) + min;
+    const randID = (length) => {
+        const chars = "ABDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        let newID = "";
+        for (let i = 0; i < length; i++) {
+            newID += chars.charAt(Math.random() * chars.length);
+        }
+        return newID;
     }
 
     return (
