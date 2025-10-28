@@ -31,10 +31,10 @@ export default function ItemList({ itemList }) {
     });
 
     return (
-        <div className="rounded bg-blue-400 mx-4 pb-3">
-            <div className="pt-2">
-            <label className="rounded text-xl font-bold text-gray-800 mx-2">Sort By:</label>
-                <section className="flex flex-row text-gray-800 gap-4 mx-4">
+        <div className="rounded bg-blue-400 p-2">
+            <div className="p-2">
+            <label className="rounded text-xl font-bold text-gray-800 p-2">Sort By:</label>
+                <section className="flex flex-row text-gray-800 gap-4 p-2">
 
                     <button 
                     name="button"
@@ -57,7 +57,7 @@ export default function ItemList({ itemList }) {
 
             </div>
             
-            <ul id="itemList" className="rounded border-2 border-white bg-blue-300 text-gray-800 p-3 max-w-11/12 mx-auto">
+            <ul id="itemList" className="rounded border-2 border-white bg-blue-300 text-gray-800 p-2">
                 {listSort.map((item) => { return (
                     <Item name={item.name} quantity={item.quantity} category={item.category} key={item.id}/>
                 )})}

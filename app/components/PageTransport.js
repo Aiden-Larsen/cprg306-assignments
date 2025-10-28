@@ -36,6 +36,7 @@ export default function PageTransporter() {
                     <option value="week-5">WEEK-5</option>
                     <option value="week-6">WEEK-6</option>
                     <option value="week-7">WEEK-7</option>
+                    <option value="week-8">WEEK-8</option>
                 </select>
             </form>
         </div>

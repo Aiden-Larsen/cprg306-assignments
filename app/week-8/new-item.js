@@ -76,9 +76,9 @@ export default function NewItem({ onAddItem }) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="rounded bg-blue-400 gap-3 mx-2.5 p-2 mt-2">
+        <form onSubmit={handleSubmit} className="rounded bg-blue-400 gap-3 p-2">
             <section>
-                <section className="rounded bg-blue-300 p-2 mb-2">
+                <section className="rounded bg-blue-300 p-2">
                     <div>
                         <label htmlFor="name" className="block font-bold text-gray-600 p-1">Item Name</label>
                         <input 
@@ -88,15 +88,15 @@ export default function NewItem({ onAddItem }) {
                         required 
                         value={name} 
                         onChange={handleNameChange} 
-                        className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2 mx-2 my-1"
+                        className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2"
                         ></input>
                     </div>
                 </section>
-                <section className="rounded bg-blue-300 p-2 mb-4">
+                <section className="rounded bg-blue-300 p-2">
                     <div className="p-1 mb-2">
                         <p className="text-gray-600 font-bold">Quantity (1-20)</p>
                     </div>
-                    <section className="flex mx-2 gap-3">
+                    <section className="flex gap-3">
                         <div>
                             <button
                             className="rounded text-m font-bold px-4 py-2 bg-blue-200 text-gray-600 active:bg-blue-50 disabled:bg-gray-400"
@@ -115,19 +115,19 @@ export default function NewItem({ onAddItem }) {
                         </div>
                     </section>
                     <section>
-                        <div className="flex rounded bg-blue-300 px-2 py-3">
+                        <div className="flex rounded bg-blue-300 p-2">
                             <p className="rounded text-gray-600 text-xl font-bold bg-blue-200 px-4 py-2">Current: {quantity}</p>
                         </div>
                     </section>
                 </section>
-                <section className="rounded bg-blue-300 p-2 mb-4">
+                <section className="rounded bg-blue-300 p-2">
                     <div>
                         <label htmlFor="category" className="block text-gray-600 font-bold p-1">Category</label>
                         <select 
                         id="category"
                         value={category}
                         onChange={handleCategory} 
-                        className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2 mx-2 my-1">
+                        className="rounded border border-gray-600 text-gray-500 bg-blue-200 p-2">
                             <option value="Produce">Produce</option>
                             <option value="Dairy">Dairy</option>
                             <option value="Bakery">Bakery</option>

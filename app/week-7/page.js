@@ -7,24 +7,21 @@ import ItemsData from "./items.json";
 import PageHeader from "../components/PageHeader.js";
 
 export default function Page() {
-    const [items] = useState([...ItemsData]);
+    const [items, setItems] = useState([...ItemsData]);
 
-    function handleAddItem(newItem) {
-        if (newItem !== undefined) {
-            console.log("!! ADDING NEW ITEM !!");
-            items.push(newItem);
-            for (let i = 0; i < items.length; i++) {
-                console.log(`${items[i].id}, ${items[i].name}, ${items[i].quantity}, ${items[i].category}`);
-            }
+    function handleAddItem(newItems) {
+        if (newItems !== undefined) {
+            setItems((oldItems) => [...oldItems, newItems])
+            return items;
         } else {
-            console.log(`Item ${newItem} is undefined`);            
+            console.log(`Item ${newItems} is undefined`);            
         }
     }
 
     return (
         <main className="bg-blue-950 pb-4">
             <PageHeader title="Week-7" description="^^"/>
-            <section className="rounded bg-blue-500 max-w-7/12 mx-auto pb-3">
+            <section className="rounded bg-blue-500 max-w-7/12 mx-auto pt-1 pb-3 mt-4">
                 <NewItem onAddItem={handleAddItem}/>
             </section>
             <section className="rounded bg-blue-500 max-w-7/12 mx-auto pb-3">
