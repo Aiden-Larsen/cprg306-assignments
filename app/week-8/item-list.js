@@ -2,9 +2,8 @@
 import { useState } from "react";
 import Item from "./item.js";
 
-export default function ItemList({ itemList }) {
+export default function ItemList({ itemList, onItemSelect}) {
     const [sortBy, setSortBy] = useState("name");
-    // const [items] = useState(itemList);
 
     // function listSort(event) {
     //     const newEventSort = event.target.value;
@@ -53,13 +52,12 @@ export default function ItemList({ itemList }) {
                     >Category</button>
 
                 </section>
-
-
+                
             </div>
             
             <ul id="itemList" className="rounded border-2 border-white bg-blue-300 text-gray-800 p-2">
                 {listSort.map((item) => { return (
-                    <Item name={item.name} quantity={item.quantity} category={item.category} key={item.id}/>
+                    <Item name={item.name} quantity={item.quantity} category={item.category} onSelect={onItemSelect} key={item.id}/>
                 )})}
             </ul>
         </div>        

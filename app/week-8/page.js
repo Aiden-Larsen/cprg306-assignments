@@ -9,6 +9,7 @@ import PageHeader from "../components/PageHeader.js";
 
 export default function Page() {
     const [items, setItems] = useState([...ItemsData]);
+    const [selectItemName, setSelectItemName] = useState("banana")
 
     function handleAddItem(newItems) {
         if (newItems !== undefined) {
@@ -17,6 +18,15 @@ export default function Page() {
         } else {
             console.log(`Item ${newItems} is undefined`);            
         }
+    }
+
+    function handleItemSelect(itemName) {
+        let newItemName = itemName.currentTarget.id.replace(
+            /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
+             '').split(",");
+        // console.log(newItemName[0].trim());
+             
+        setSelectItemName(newItemName[0].trim());
     }
 
     return (
@@ -29,12 +39,12 @@ export default function Page() {
                     </section>
                     <section className="rounded bg-blue-500">
                         <h1 className="text-2xl font-bold text-gray-900">Shopping List</h1>
-                        <ItemList itemList={items}/>
+                        <ItemList itemList={items} onItemSelect={handleItemSelect}/>
                     </section>
                 </div>
                 <div className="usttify-self-start w-full m-5">
                     <h1></h1>
-                    <MealIdeas ingredient={"chicken"}/>
+                    <MealIdeas ingredient={selectItemName}/>
                 </div>
             </div>
         </main>
